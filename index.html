@@ -39,7 +39,7 @@
                         </div>
                         <div class="my-thumbnails position-relative">
                             <!-- prev -->
-                            <div class="my-previous position-absolute">
+                            <div class="my-previous position-absolute" @click="prev()">
                                 <span class="my-prev-hook"></span>
                             </div>
                             <!-- immagini thumbnails -->
@@ -47,7 +47,7 @@
                                 <img class=" my-thumb-container" :src="thumbnail.url" :alt="thumbnail.nome">
                             </div>
                             <!-- next -->
-                            <div class="my-next position-absolute">
+                            <div class="my-next position-absolute" @click="next()">
                                 <span class="my-next-hook"></span>
                             </div>
                         </div>
