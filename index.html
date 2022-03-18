@@ -33,7 +33,7 @@
                     <div class="my-carousel-container d-flex flex-column px-5" id="my-carousel">
                         <div class="my-carousel-images">
                             <!-- immagini -->
-                            <div class="my-img-wrapper" v-for = "(image, index) in images" :class="index === 0 ? 'active' : '' ">
+                            <div class="my-img-wrapper" v-for = "(image, index) in images" :class="(index === activeElement) ? 'active' : '' ">
                                 <img class= 'img-container img-fluid' :src="image.url" :alt="image.nome" >
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                                 <span class="my-prev-hook"></span>
                             </div>
                             <!-- immagini thumbnails -->
-                            <div class='thumb-wrapper' v-for = "(thumbnail, index) in images" :class="index === 0 ? 'clicked' : '' ">
+                            <div class='thumb-wrapper' v-for = "(thumbnail, index) in images" :class="(index === activeElement) ? 'clicked' : '' ">
                                 <img class=" my-thumb-container" :src="thumbnail.url" :alt="thumbnail.nome">
                             </div>
                             <!-- next -->

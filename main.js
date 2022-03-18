@@ -1,8 +1,7 @@
 const app = new Vue (
     {
         el : '#app',
-
-        activeElement : 0,
+        
         data : {
             images : [
                 {
@@ -21,10 +20,12 @@ const app = new Vue (
                     nome : 'Fourth Guitar',
                     url : '/Users/Matteo/Desktop/BOOLEAN/CLASSE 55/vue-slider/img/fender-img-strato.jpeg',
                 },
-            ]            
+            ],
+            activeElement : 0, 
         },
-
+        
         methods : {
+
             prev(){
                 if (this.activeElement === 0){
                     this.activeElement = this.images.lenght - 1;
